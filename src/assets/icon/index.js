@@ -4,5 +4,6 @@ import IconJual from './IconJual.svg';
 import IconJualActive from './IconJualActive.svg';
 import IconProfile from './IconProfile.svg';
 import IconProfileActive from './IconProfileActive.svg';
+import IconPostProduct from './IconPostProduct.svg';
 
-export {IconBeranda, IconBerandaActive, IconJual, IconJualActive, IconProfile, IconProfileActive};
+export {IconBeranda, IconBerandaActive, IconJual, IconJualActive, IconProfile, IconProfileActive, IconPostProduct};

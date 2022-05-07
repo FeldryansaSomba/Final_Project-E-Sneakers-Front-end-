@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from 'react';
 import { BottomNavigator } from "../components";
 import { Beranda, Jual, Login, Profile, SplashScreen } from "../pages";
+import SignUp from "../pages/SignUp";
 
 
 const Stack = createNativeStackNavigator();
@@ -10,7 +11,15 @@ const Tab = createBottomTabNavigator()
 
 const MainApp = () => {
     return (
+        // <Stack.Navigator>
+        //     <Stack.Screen
+        //         name="SignUp"
+        //         component={SignUp}
+        //         options={{headerShown: false}}
+        //     />
+        // </Stack.Navigator>
         <Tab.Navigator tabBar={props => <BottomNavigator {...props}/>}>
+            
             <Tab.Screen name="Beranda" 
             component={Beranda} 
             options={{headerShown: false}}
