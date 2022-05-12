@@ -1,36 +1,48 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import {Gap, HeaderProfile} from '../../components';
-import {colors} from '../../utils';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import React from 'react'
+import { colors } from '../../../utils'
+import { ILProfil } from '../../../assets'
 
-const Profile = ({navigation}) => {
+const HeaderProfil = ({title, onPress}) => {
   return (
-    <View>
-      <HeaderProfile style={styles.header} text="Feldryansa" />
-      <Gap height={30} />
-      <View style={styles.infoAppButton}>
-        <Text
-          onPress={() => navigation.navigate('InformasiAplikasi')}
-          style={styles.text}>
-          Informasi Aplikasi
-        </Text>
-      </View>
+    <View style={styles.container}>
+      <Image source={ILProfil} style={styles.avatar} />
+      <Text style={styles.text}>{title}</Text>
+      <TouchableOpacity onPress={onPress}>
+      <Text style={styles.edit} >Edit Profil</Text>
+      </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 
-export default Profile;
+export default HeaderProfil
 
 const styles = StyleSheet.create({
-  infoAppButton: {
-    paddingHorizontal: 12,
-  },
-  text: {
-    paddingHorizontal: 12,
-    paddingBottom: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: '#313D6A',
-    fontSize: 14,
-    color: colors.pertama,
-  },
-});
+    container: {
+        backgroundColor: colors.pertama,
+        flexDirection: 'row',
+        alignItems: 'center',
+        height: 107
+    },
+    text: {
+        marginLeft: 16,
+        fontFamily: 'Montserrat-Bold',
+        color: colors.keempat,
+        fontSize: 20,
+        flex: 1,
+    },
+    avatar: {
+        marginTop: 21,
+        marginBottom: 21,
+        marginLeft: 21,
+        
+    },
+    edit: {
+        fontFamily: 'Montserrat-SemiBold',
+        color: colors.keempat,
+        fontSize: 13,
+        marginRight: 5,
+        marginTop: 73
+    }
+}
+)
