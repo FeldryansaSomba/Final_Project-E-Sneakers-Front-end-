@@ -6,6 +6,9 @@ import IconProfile from './IconProfile.svg';
 import IconProfileActive from './IconProfileActive.svg';
 import IconPostProduct from './IconPostProduct.svg';
 import IconApp from './IconApp.svg';
+import IconBack from './IconBack.svg';
+import IconAdd from './IconAdd 1.svg';
+import IconGambar from './GambarProfile.svg';
 
 export {
   IconBeranda,
@@ -16,4 +19,7 @@ export {
   IconProfileActive,
   IconPostProduct,
   IconApp,
+  IconBack,
+  IconAdd,
+  IconGambar
 };

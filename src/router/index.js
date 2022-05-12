@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {BottomNavigator} from '../components';
 import {Beranda, Jual, Login, Profile, SplashScreen} from '../pages';
+import EditProfile from '../pages/EditProfile';
 import SignUp from '../pages/SignUp';
 
 const Stack = createNativeStackNavigator();
@@ -47,6 +48,11 @@ const Router = () => {
       <Stack.Screen
         name="MainApp"
         component={MainApp}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
