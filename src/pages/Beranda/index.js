@@ -4,7 +4,7 @@ import { CardProduk, Gap, HeaderBeranda } from '../../components'
 import { Sneaker1, Sneaker2, Sneaker3 } from '../../assets'
 import { colors } from '../../utils'
 
-const Beranda = () => {
+const Beranda = ({navigation}) => {
   return (
     <View style={styles.container}>
       <HeaderBeranda/>
@@ -15,6 +15,7 @@ const Beranda = () => {
       harga="350000" 
       lokasi="Manado" 
       pic={Sneaker1}
+      onPress={()=> navigation.navigate("PesanBerhasil")}
       />
       <Gap height={13}/>
       <CardProduk 
@@ -22,6 +23,7 @@ const Beranda = () => {
       harga="300000" 
       lokasi="Jakarta Timur" 
       pic={Sneaker2}
+      onPress={()=> navigation.navigate("PesanBerhasil")}
       />
       <Gap height={13}/>
       <CardProduk 
@@ -29,6 +31,7 @@ const Beranda = () => {
       harga="400000" 
       lokasi="Jakarta" 
       pic={Sneaker3}
+      onPress={()=> navigation.navigate("PesanBerhasil")}
       />
       </View>
     </View>

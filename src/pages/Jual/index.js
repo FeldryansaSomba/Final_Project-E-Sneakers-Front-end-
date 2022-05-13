@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import {HeaderJual, TextInput, Button, Gap} from '../../components';
 import {IconPostProduct} from '../../assets';
@@ -26,6 +26,7 @@ const Jual = () => {
   return (
     <View>
       <HeaderJual style={styles.title} text="Jual Sneakers" />
+      <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.contentWrapper}>
         <View style={styles.productWrapper}>
           <View style={styles.border}>
@@ -52,8 +53,10 @@ const Jual = () => {
         <Gap height={49} />
         <View style={styles.button}>
           <Button title="Jual" />
-        </View>
+          <Gap height={90}/>
+          </View>
       </View>
+      </ScrollView>
     </View>
   );
 };

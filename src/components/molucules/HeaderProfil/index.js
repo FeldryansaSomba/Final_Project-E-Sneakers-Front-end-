@@ -3,14 +3,11 @@ import React from 'react'
 import { colors } from '../../../utils'
 import { ILProfil } from '../../../assets'
 
-const HeaderProfil = ({title, onPress}) => {
+const HeaderProfil = ({title}) => {
   return (
     <View style={styles.container}>
       <Image source={ILProfil} style={styles.avatar} />
       <Text style={styles.text}>{title}</Text>
-      <TouchableOpacity onPress={onPress}>
-      <Text style={styles.edit} >Edit Profil</Text>
-      </TouchableOpacity>
     </View>
   )
 }

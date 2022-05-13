@@ -9,6 +9,7 @@ import IconApp from './IconApp.svg';
 import IconBack from './IconBack.svg';
 import IconAdd from './IconAdd 1.svg';
 import IconGambar from './GambarProfile.svg';
+import IconBerhasil from './IconBerhasil.svg'
 
 export {
   IconBeranda,
@@ -21,5 +22,6 @@ export {
   IconApp,
   IconBack,
   IconAdd,
-  IconGambar
+  IconGambar,
+  IconBerhasil
 };

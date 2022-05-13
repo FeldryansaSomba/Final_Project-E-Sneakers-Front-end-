@@ -2,7 +2,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {BottomNavigator} from '../components';
-import {Beranda, Jual, Login, Profile, SplashScreen} from '../pages';
+import {Beranda, Jual, Login, PesanBerhasil, Profile, SplashScreen} from '../pages';
 import EditProfile from '../pages/EditProfile';
 import SignUp from '../pages/SignUp';
 
@@ -29,7 +29,7 @@ const MainApp = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Router">
+    <Stack.Navigator >
       <Stack.Screen
         name="SplashScreen"
         component={SplashScreen}
@@ -53,6 +53,11 @@ const Router = () => {
       <Stack.Screen
         name="EditProfile"
         component={EditProfile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="PesanBerhasil"
+        component={PesanBerhasil}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

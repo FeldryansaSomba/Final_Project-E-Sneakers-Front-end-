@@ -5,7 +5,7 @@ import { Gap } from '../../atoms'
 
 const CardProduk = ({onPress, title, harga, lokasi, pic}) => {
   return (
-    <TouchableOpacity>
+    <View>
       <View style={styles.container}>
       <Image source={pic} style={styles.gambar}/>
       <View style={styles.container2}>
@@ -15,8 +15,11 @@ const CardProduk = ({onPress, title, harga, lokasi, pic}) => {
       <Gap height={12}/>
       <Text style={styles.loc}>{lokasi}</Text>
       </View>
+      <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text style={styles.textButton}>Beli</Text>
+      </TouchableOpacity>
       </View>
-    </TouchableOpacity>
+    </View>
   )
 }
 
@@ -55,6 +58,22 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'Montserrat-Medium',
     color: colors.ketujuh
+  },
+  button: {
+    width: 49,
+    height: 38,
+    backgroundColor: colors.pertama,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+    position: 'absolute',
+    marginLeft: 280,
+    marginTop: 39
+  },
+  textButton: {
+    color: 'white',
+    fontFamily: 'Montserrat-SemiBold'
   }
+  
   
 })
